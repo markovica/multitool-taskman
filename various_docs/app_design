@@ -1,0 +1,43 @@
+
+Database models:
+Tasks       # A placeholder for uploaded files to be analyzed by the selected workflow.
+Workflows   # JSON blob condaining "nodes" (components) and "edges" that form a workflow
+Reports     # data for generated reports - cotaings JSON blob with raw analysis data and an optional generated report file
+Users       # user information/login
+Teams       # user grouping entity
+Files       # files, either uploaded for analysis in the Task, or generated in the Report
+Types       # a "pivot" table containing 2d various types
+
+Workflow Components: are class files located in a specific directory that are extending a "component base class", and are loaded on start. They are referenced by their uniq class name.
+
+
+Technology:
+
+- Python
+- PostgreSQL (SQLite for dev)
+- Celery/RabitMQ for runing tasks
+
+Functionality list:
+- Authentication: Basic authentication + Bearer Authentication
+- Multiple file uploader with progress bar
+
+
+
+
+
+Some interesting tools/components to check:
+flask-admin - Simple and extensible administrative interface framework for Flask.
+https://github.com/flask-admin/flask-admin
+flower - Real-time monitor and web admin for Celery.
+https://github.com/mher/flower
+jet-bridge - Admin panel framework for any application with nice UI (ex Jet Django).
+https://github.com/jet-admin
+wooey - A Django app which creates automatic web UIs for Python scripts.
+https://github.com/wooey/wooey
+
+
+Guides and usefull info:
+python-ds - A collection of data structure and algorithms for coding interviews.
+https://github.com/prabhupant/python-ds
+
+https://github.com/keon/algorithms

@@ -1,0 +1,1 @@
+from taskman.module import TaskmanModule

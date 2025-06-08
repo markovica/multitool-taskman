@@ -1,0 +1,31 @@
+          
+          
+          
+          
+
+          {% if current_user.is_authenticated %}
+            <li class="nav-header">TASKMAN</li>
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Tasks</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Workflows</a></li>
+            <li class="nav-header">&nbsp;</li>
+
+            <li class="nav-header">OTHER TOOLS/UTILITIES</li>
+            <li class="nav-item"><a class="nav-link" href="#">CVE Checker</a></li>
+            <li class="nav-header">&nbsp;</li>
+
+            <li class="nav-header">SETTING</li>
+            <li class="nav-item"><a class="nav-link" href="#">General settings</a></li>
+            <li class="nav-header">&nbsp;</li>
+
+            <li class="nav-header">USER MANAGEMENT</li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.admin_panel') }}">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.create_role') }}">Create roles</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('admin.bind_roles_with_user') }}">Bind roles with users</a></li>
+            <li class="nav-item"><span>&nbsp;</span>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.logout') }}">Log Out</a>
+          {% else %}
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Log In</a>
+          {% endif %}
