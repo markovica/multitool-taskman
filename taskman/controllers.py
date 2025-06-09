@@ -29,12 +29,11 @@ def components():
     loaded = load_components()
     components_list = []
     #print(loaded)
-    #print(loaded)
     #print(loaded.__dir__())
-    for l in loaded:
-        #print(l)
-        #print(l.__dir__())
-        components_list.append(l)
+    for item in loaded:
+        #print(item)
+        #print(item.__dir__())
+        components_list.append(item)
     return components_list
 
 
